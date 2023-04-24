@@ -1,0 +1,97 @@
+syntax="proto3";
+
+option go_package = "./proto;messager";
+
+package main;
+
+
+enum CommunicationType {
+    Type_External_Client_To_Cluster  = 0;
+    Type_External_Cluster_To_Client  = 1;
+    Type_Internal_Primary_To_Replica = 2;
+    Type_Internal_Replica_To_Primary = 3;
+}
+
+// New message type
+// Sent to Coordinator 1
+message ClientProposeEntry{
+    int64 clientID = 1;
+    int64 timestamp = 2;
+    string transaction = 3;
+    bytes macs = 4;
+}
+
+message LeaderPostEntry{
+    int64 index = 1;
+    bytes signature = 2;
+    int64 clientID =3;
+    string transaction = 4;
+    int64 timestamp = 5;
+    bytes macs = 6;
+}
+
+message InBatchEntry{
+    string transaction = 1;
+    int64 timestamp = 2;
+    bytes macs = 3;
+}
+
+message LeaderPostBatchedPostEntries{
+    int64 batchIndex = 1;
+    bytes signatureOnBatch = 2;
+    repeated InBatchEntry batchedEntries = 4;
+}
+
+// Sent to Coordinator 2
+message WorkerPostReply{
+    int64 index = 1;
+    bytes signature = 2;
+    int64 clientId = 3;
+}
+
+message LeaderOrderEntry{
+    int64 index = 1;
+    bytes combinedSignatures = 2;
+    int64 clientId = 3;
+}
+
+// Sent to Coordinator 3
+message WorkerOrderReply{
+    int64 index = 1;
+    bytes signature = 2;
+    int64 clientId = 3;
+}
+
+message LeaderCommitEntry{
+    int64 index = 1;
+    bytes combinedSignatures = 2;
+    int64 clientId = 3;
+}
+
+// Sent to client
+message ClientConfirm{
+    int64 timestamp     = 1;
+    int64 commitIndex   = 2;
+    bytes txHash        = 3;
+}
+
+// Old messaging protocol
+//message LeaderIssueCmd {
+//     int64 msgType   = 1;
+//     int64 msgIndex  = 2;
+//     int64 clientID  = 3;
+//     int64 timestamp = 4;
+//     string tx       = 5;
+//     bytes txHash    = 6;
+//     bytes sig       = 7;
+//     bytes threshSig = 8;
+//}
+
+//message ServerReplyCmd{
+//    int64 msgType   = 1;
+//    float msgIndex  = 2;
+//    bytes infoHash  = 3;
+//    bytes sig       = 4;
+//    float clientID  = 5;
+//    float timestamp = 6;
+//}
