@@ -13,7 +13,7 @@ Compared to the submission, the extended version includes an appendix with three
 2. Examples of PrestigeBFT's reputation mechanism, including step-by-step calculation of different server behavior and analysis.
 3. Selected questions collected during presentations, lectures, and conversions from various groups including ECE/CS students, professors, and distributed system developers. Questions are arranged according to their related sections.  
 
-The extended paper can be obtained from here, or from folder `./paper/prestigebft-extended.pdf`  
+The extended paper can be obtained from folder `./paper/prestigebft-extended.pdf` (it may take a minute to render down)  
 
 # Artifact
 To preserve anonymity of the double-blind review process, we have decided not to disclose the popular cloud platform used for evaluation, as it may reveal our identity. The deployment details are closely linked to this platform, and we will submit them to artifact evaluation once the paper is published.

@@ -10,7 +10,7 @@ import (
 	"github.com/dedis/kyber/share"
 	"github.com/dedis/kyber/sign/bls"
 	kyberOldScalar "go.dedis.ch/kyber"
-	"popcorn/penKeyGen"
+	"prestigebft/penKeyGen"
 )
 
 func serialization(m interface{}) ([]byte, error) {
