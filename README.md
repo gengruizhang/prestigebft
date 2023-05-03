@@ -9,9 +9,9 @@ We apologize for the typos, and they have been corrected in the extended version
 
 # The extended PrestigeBFT paper
 Compared to the submission, the extended version includes an appendix with three sections:  
-1. Proofs mentioned in the submission including the client interaction, properties of view changes, safety, and liveness.
-2. Examples of PrestigeBFT's reputation mechanism, including step-by-step calculation of different server behavior and analysis.
-3. Selected questions collected during presentations, lectures, and conversions from various groups including ECE/CS students, professors, and distributed system developers. Questions are arranged according to their related sections.  
+1. Proofs mentioned in the submission including the client interaction, properties of view changes, safety, and liveness. 
+2. Selected questions collected during presentations, lectures, and conversions from various groups including ECE/CS students, professors, and distributed system developers. Questions are arranged according to their related sections.
+3. Examples of PrestigeBFT's reputation mechanism, including step-by-step calculation of different server behavior and analysis.
 
 The extended paper can be obtained from folder `./paper/prestigebft-extended.pdf` (it may take a minute to render down)  
 
