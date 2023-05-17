@@ -15,6 +15,8 @@ Compared to the submission, the extended version includes an appendix with three
 
 The extended paper can be obtained from folder `./paper/prestigebft-extended.pdf` (it may take a minute to render down)  
 
+*Videos of PrestigeBFT has been temporarily made unavailable in order to preserve the double-blind review process.  
+
 # Artifact
 To preserve anonymity of the double-blind review process, we have decided not to disclose the popular cloud platform used for evaluation, as it may reveal our identity. The deployment details are closely linked to this platform, and we will submit them to artifact evaluation once the paper is published.
 
