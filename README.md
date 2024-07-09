@@ -1,5 +1,10 @@
 <h1 style="text-align:center;"> PrestigeBFT: Revolutionizing View Changes in BFT Consensus Algorithms with Reputation Mechanisms </h1>
 
+
+# Update Heads-up
+
+A major update of the code will be posted in August, which incorporates a more efficient communication service between clients and servers and among servers.
+
 # Run PrestigeBFT
 GoLang should have been properly installed with `GOPATH` and `GOROOT`. The GoLang version should be at least `go1.17.6`. In addition, three external packages were used (check out `go.mod`).
 
